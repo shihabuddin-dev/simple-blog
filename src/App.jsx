@@ -1,10 +1,8 @@
-
 import { Suspense, useState } from 'react'
 import './App.css'
 import Navbar from './components/navbar/Navbar'
 import Blogs from './components/blogs/Blogs'
 import History from './components/history/History'
-
 
 const fetchBlogsData = async () => {
   const res = await fetch('blogs.json')
@@ -30,8 +28,6 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-
-
       <div className='flex justify-between mt-4'>
         <div className='w-[70%] px-4'>
           <Suspense fallback={<h3 className='text-center'>Blogs Data is Loading......</h3>}>

@@ -16,9 +16,15 @@ function App() {
     <>
       <Navbar></Navbar>
 
-      <Suspense fallback={<h3>Blogs Data is Loading......</h3>}>
+     
+      <div className='flex justify-between mt-4'>
+        <div className='w-[70%] px-4'> 
+          <Suspense fallback={<h3>Blogs Data is Loading......</h3>}>
         <Blogs blogsPromise={blogsPromise} />
       </Suspense>
+      </div>
+        <div className='w-[30%] bg-amber-100 text-center p-4 md:mt-10'>History</div>
+      </div>
     </>
   )
 }
